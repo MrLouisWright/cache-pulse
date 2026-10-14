@@ -1,0 +1,54 @@
+{
+  "name": "cache-pulse",
+  "version": "1.0.0",
+  "description": "Check static hosting caching for performance: long max-age + immutable on fingerprinted assets, revalidation on HTML, no long cache on unhashed files, Vary and Set-Cookie pitfalls, and precompressed .br/.gz files that match. Reads _headers, vercel.json, netlify.toml, firebase.json. SARIF, Action. Zero deps.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "cache-pulse": "bin/cache-pulse.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "action.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "cache-control",
+    "caching",
+    "performance",
+    "immutable",
+    "netlify",
+    "vercel",
+    "cloudflare-pages",
+    "brotli",
+    "static-site",
+    "github-action"
+  ],
+  "author": "Louis Wright <hello@louiswright.co.uk> (https://github.com/MrLouisWright)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrLouisWright/cache-pulse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrLouisWright/cache-pulse/issues"
+  },
+  "homepage": "https://github.com/MrLouisWright/cache-pulse#readme"
+}

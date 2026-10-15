@@ -1,5 +1,7 @@
 # cache-pulse
 
+[![npm version](https://img.shields.io/npm/v/cache-pulse.svg)](https://www.npmjs.com/package/cache-pulse) [![CI](https://github.com/MrLouisWright/cache-pulse/actions/workflows/ci.yml/badge.svg)](https://github.com/MrLouisWright/cache-pulse/actions/workflows/ci.yml) [![Node](https://img.shields.io/node/v/cache-pulse.svg)](https://nodejs.org) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > Check that your static hosting config caches the right things: fingerprinted assets for a year, HTML revalidated, and nothing stale after a deploy.
 
 Caching is the cheapest performance win and the easiest to get backwards. Fingerprinted bundles (`index-BdT9x2Qa.js`) should be cached for a year with `immutable`; HTML and unfingerprinted files (`/styles.css`, `/logo.png`) must revalidate, or visitors keep yesterday's site. `cache-pulse` reads the header rules in your build output or repo (`_headers`, `vercel.json`, `netlify.toml`, `firebase.json`, `serve.json`), resolves the `Cache-Control` that applies to every file, and reports the mistakes, grouped by the header rule that causes them.

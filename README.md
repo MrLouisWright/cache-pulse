@@ -170,11 +170,19 @@ The action runs the bundled CLI with Node 20; it has no dependencies to install.
 
 ## Library
 
+Install it in your project first:
+
+```bash
+npm install --save-dev cache-pulse
+```
+
 ```js
 import { check, isHashed, parseCacheControl } from "cache-pulse";
 isHashed("/assets/index-BdT9x2Qa.js"); // true
 parseCacheControl("public, max-age=31536000, immutable").immutable; // true
 ```
+
+The package is ESM-only (there is no CommonJS build): use `import`, or `await import("cache-pulse")` from CommonJS.
 
 Types are included.
 
